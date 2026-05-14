@@ -1,10 +1,10 @@
 <p align="center" class="logo-section">
 <img src="https://i.ibb.co/NrPh9xP/image.png" height="80" width="80"/>
 </br>
-<img src="https://halitsever-api.vercel.app/api/repo-title?title=repo_name">
+<img src="https://halitsever-api.vercel.app/api/repo-title?title=Dotfiles">
 
 <p align="center">
-✋ Coming soon...<br>
+💻 My dotfiles<br>
 <br/>
 <br/>
 <img src="https://img.shields.io/github/sponsors/halitsever"/>
@@ -39,5 +39,5 @@ Todo: update docs
 </p>
 
 <p align="center">
-  ...
+  MIT LICENSE
 </p>
