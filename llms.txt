@@ -1,0 +1,15 @@
+# dotfiles
+
+> Halit Sever's personal macOS dotfiles: an Oh My Zsh `.zshrc` (agnoster theme, git plugin) with PATH setup for Homebrew, Cargo, pnpm, the Android SDK and OpenJDK, optional pyenv, gvm and neofetch, git aliases and shared zsh history.
+
+Install by cloning to `~/dotfiles` and symlinking: `ln -sf ~/dotfiles/.zshrc ~/.zshrc`. The paths assume macOS on Apple Silicon (Homebrew in `/opt/homebrew`, SDKs under `~/Library`), so the file needs edits before it works on Linux.
+
+## Docs
+
+- [README](https://github.com/halitsever/dotfiles/blob/main/Readme.md): features and install steps
+- [.zshrc](https://github.com/halitsever/dotfiles/blob/main/.zshrc): the zsh configuration itself
+- [CI workflow](https://github.com/halitsever/dotfiles/blob/main/.github/workflows/ci.yml): the `zsh -n` syntax check run on every push and pull request
+
+## Optional
+
+- [Source](https://github.com/halitsever/dotfiles): repository
