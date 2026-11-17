@@ -16,7 +16,6 @@ Halit Sever's personal macOS shell setup: an Oh My Zsh `.zshrc`, symlinked into 
 - The pnpm block checks `$PATH` before prepending so `reload` does not duplicate entries. Follow that pattern for new PATH entries.
 - There is no install script. The README documents the clone and `ln -sf` steps, so update it when files are added.
 - `.vscode/settings.json` is an empty `{}`.
-- `LICENSE` still has the `[fullname]` placeholder.
 
 ## Conventions
 
