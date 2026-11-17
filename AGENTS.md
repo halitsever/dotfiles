@@ -12,7 +12,7 @@ Halit Sever's personal macOS shell setup: an Oh My Zsh `.zshrc`, symlinked into 
 
 - `.zshrc` is macOS-only: `/opt/homebrew`, `~/Library/pnpm`, `~/Library/Android/sdk` and `/usr/libexec/java_home`. On Linux the `JAVA_HOME` line prints an error on every shell start.
 - Optional tools (pyenv, gvm, neofetch) are guarded with `command -v` or `[ -s ... ]`. Guard any new tool the same way so fresh machines still start cleanly.
-- `neofetch` runs at the end of `.zshrc` whenever it is installed, so `zsh -i -c exit` prints its banner.
+- `neofetch` runs during `.zshrc` load, before the history and `compinit` setup, whenever it is installed, so `zsh -i -c exit` prints its banner.
 - The pnpm block checks `$PATH` before prepending so `reload` does not duplicate entries. Follow that pattern for new PATH entries.
 - There is no install script. The README documents the clone and `ln -sf` steps, so update it when files are added.
 - `.vscode/settings.json` is an empty `{}`.
