@@ -38,7 +38,7 @@ ln -sf ~/dotfiles/.zshrc ~/.zshrc
 source ~/.zshrc
 ```
 
-<p align="center" href="https://github.com/halitsever/repo_name/issues">
+<p align="center" href="https://github.com/halitsever/dotfiles/issues">
 <img src="https://halitsever-api.vercel.app/api/issue"/>
 </p>
 
