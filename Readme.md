@@ -1,13 +1,13 @@
 <p align="center" class="logo-section">
-<img src="/icon.svg" height="80" width="80"/>
+<img src="/icon.svg" height="80" width="80" alt="Dotfiles icon"/>
 </br>
 <img src="https://halitsever-api.vercel.app/api/repo-title?title=Dotfiles">
 
 <p align="center">
-💻 My dotfiles<br>
+💻 Personal dotfiles for macOS: an Oh My Zsh .zshrc with Homebrew, pnpm, Android SDK, Java, pyenv and gvm setup plus git aliases.<br>
 <br/>
 <br/>
-<img src="https://img.shields.io/github/sponsors/halitsever"/>
+<img src="https://img.shields.io/github/sponsors/halitsever" alt="GitHub Sponsors"/>
 </p>
 <p align="center">
 <a align="center" href="#">Documentation</a>
@@ -18,16 +18,33 @@
 <img src="https://halitsever-api.vercel.app/api/details"/>
 </p>
 
-- 🧑‍💻 [**TODO**](#) - update docs
+- **Oh My Zsh** with the `agnoster` theme and the `git` plugin
+- PATH setup for Homebrew (`/opt/homebrew`), Cargo, `~/.local/bin`, pnpm, Android SDK platform tools and Homebrew OpenJDK (`JAVA_HOME`)
+- pyenv, gvm and neofetch load only when they are installed
+- Git aliases (`gs`, `ga`, `gc`, `gp`) and shell shortcuts (`cls`, `zshconfig`, `reload`)
+- Shared, de-duplicated zsh history (5000 entries) and `compinit` completion
+- CI checks `.zshrc` syntax with `zsh -n` on every push and pull request
 
 <p align="center" >
 <img src="https://halitsever-api.vercel.app/api/installation"/>
 </p>
 
-Todo: update docs
+Install zsh and [Oh My Zsh](https://ohmyz.sh/) first. The paths in `.zshrc` assume macOS (Homebrew in `/opt/homebrew`, SDKs under `~/Library`).
+
+```sh
+git clone https://github.com/halitsever/dotfiles.git ~/dotfiles
+cp ~/.zshrc ~/.zshrc.backup
+ln -sf ~/dotfiles/.zshrc ~/.zshrc
+source ~/.zshrc
+```
 
 <p align="center" href="https://github.com/halitsever/repo_name/issues">
 <img src="https://halitsever-api.vercel.app/api/issue"/>
+</p>
+
+<p align="center">
+Found a bug or have an idea? Open an <a href="https://github.com/halitsever/dotfiles/issues">issue</a>.<br/>
+Read the <a href=".github/CONTRIBUTING.md">contributing guide</a> before sending a pull request.
 </p>
 
 <p align="center">
