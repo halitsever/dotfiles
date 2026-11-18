@@ -4,7 +4,7 @@
 <img src="https://halitsever-api.vercel.app/api/repo-title?title=Dotfiles">
 
 <p align="center">
-💻 Personal dotfiles for macOS: an Oh My Zsh .zshrc with Homebrew, pnpm, Android SDK, Java, pyenv and gvm setup plus git aliases.<br>
+💻 Personal macOS dotfiles: an Oh My Zsh .zshrc with Homebrew, pnpm, Android SDK, Java, pyenv and gvm setup plus git aliases.<br>
 <br/>
 <br/>
 <img src="https://img.shields.io/github/sponsors/halitsever" alt="GitHub Sponsors"/>
@@ -18,16 +18,20 @@
 <img src="https://halitsever-api.vercel.app/api/details"/>
 </p>
 
+### What the .zshrc sets up
+
 - **Oh My Zsh** with the `agnoster` theme and the `git` plugin
 - PATH setup for Homebrew (`/opt/homebrew`), Cargo, `~/.local/bin`, pnpm, Android SDK platform tools and Homebrew OpenJDK (`JAVA_HOME`)
 - pyenv, gvm and neofetch load only when they are installed
 - Git aliases (`gs`, `ga`, `gc`, `gp`) and shell shortcuts (`cls`, `zshconfig`, `reload`)
-- Shared, de-duplicated zsh history (5000 entries) and `compinit` completion
+- Shared zsh history (5000 entries, consecutive duplicates skipped) and `compinit` completion
 - CI checks `.zshrc` syntax with `zsh -n` on every push and pull request
 
 <p align="center" >
 <img src="https://halitsever-api.vercel.app/api/installation"/>
 </p>
+
+### Install the zshrc on macOS
 
 Install zsh and [Oh My Zsh](https://ohmyz.sh/) first. The paths in `.zshrc` assume macOS (Homebrew in `/opt/homebrew`, SDKs under `~/Library`).
 
