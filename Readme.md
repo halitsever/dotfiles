@@ -4,7 +4,7 @@
 <img src="https://halitsever-api.vercel.app/api/repo-title?title=Dotfiles">
 
 <p align="center">
-💻 Personal macOS dotfiles: an Oh My Zsh .zshrc with Homebrew, pnpm, Android SDK, Java, pyenv and gvm setup plus git aliases.<br>
+Personal macOS dotfiles: an Oh My Zsh .zshrc with Homebrew, pnpm, Android SDK, Java, pyenv and gvm setup plus git aliases.<br>
 <br/>
 <br/>
 <img src="https://img.shields.io/github/sponsors/halitsever" alt="GitHub Sponsors"/>
