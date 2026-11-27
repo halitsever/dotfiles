@@ -10,7 +10,7 @@ Personal macOS dotfiles: an Oh My Zsh .zshrc with Homebrew, pnpm, Android SDK, J
 <img src="https://img.shields.io/github/sponsors/halitsever" alt="GitHub Sponsors"/>
 </p>
 <p align="center">
-<a align="center" href="#">Documentation</a>
+<a align="center" href="https://halitsever.github.io/dotfiles/">Documentation</a>
   </p>
 </p>
 
