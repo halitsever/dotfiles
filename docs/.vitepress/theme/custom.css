@@ -1,0 +1,581 @@
+:root {
+  --slate: #334155;
+  --slate-deep: #283446;
+  --paper: #ffffff;
+  --ink: #0f172a;
+  --dot: #808080;
+  --mist: #d5dde8;
+  --marker: #ffd84d;
+  --marker-pale: #fff4bf;
+
+  --font-mono: 'Martian Mono Variable', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-text: 'Schibsted Grotesk Variable', system-ui, sans-serif;
+
+  --vp-font-family-base: var(--font-text);
+  --vp-font-family-mono: var(--font-mono);
+
+  --vp-c-bg: var(--paper);
+  --vp-c-bg-alt: #f1f5f9;
+  --vp-c-bg-soft: #f1f5f9;
+  --vp-c-text-1: var(--ink);
+  --vp-c-text-2: #475569;
+  --vp-c-text-3: #64748b;
+  --vp-c-divider: #e2e8f0;
+  --vp-c-gutter: #e2e8f0;
+  --vp-c-brand-1: var(--slate);
+  --vp-c-brand-2: #1e293b;
+  --vp-c-brand-3: var(--slate);
+  --vp-c-brand-soft: rgba(51, 65, 85, 0.1);
+  --vp-code-block-bg: #f1f5f9;
+  --vp-code-color: var(--ink);
+  --vp-code-bg: #eef2f7;
+  --vp-code-font-size: 0.8em;
+  --vp-nav-height: 60px;
+}
+
+/* Nav and footer sit on the slate of the social card. */
+.VPNav,
+.VPFooter {
+  --vp-nav-bg-color: var(--slate);
+  --vp-nav-screen-bg-color: var(--slate);
+  --vp-c-bg: var(--slate);
+  --vp-c-bg-soft: var(--slate-deep);
+  --vp-c-bg-elv: var(--slate-deep);
+  --vp-c-text-1: #ffffff;
+  --vp-c-text-2: var(--mist);
+  --vp-c-brand-1: var(--marker);
+  --vp-c-divider: rgba(255, 255, 255, 0.14);
+  --vp-c-gutter: rgba(255, 255, 255, 0.14);
+}
+.VPNavBar,
+.VPNavBar:not(.home.top) {
+  background-color: var(--slate) !important;
+}
+.VPNavBar .divider-line {
+  background-color: rgba(255, 255, 255, 0.14) !important;
+}
+.VPNavBarTitle .title {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+.VPNavBarMenuLink,
+.VPNavScreenMenuLink {
+  font-family: var(--font-mono);
+  font-stretch: 87.5%;
+  font-size: 0.78rem !important;
+}
+.VPFooter {
+  background-color: var(--slate) !important;
+  border-top: 0 !important;
+}
+.VPFooter .message,
+.VPFooter .copyright {
+  color: var(--mist) !important;
+}
+
+/* Docs pages */
+.vp-doc h1,
+.vp-doc h2,
+.vp-doc h3 {
+  font-family: var(--font-mono);
+  letter-spacing: -0.03em;
+}
+.vp-doc h1 {
+  font-size: clamp(1.45rem, 3.4vw, 2rem);
+  line-height: 1.25;
+  font-weight: 700;
+}
+.vp-doc h2 {
+  font-size: 1.15rem;
+  font-weight: 650;
+  font-stretch: 90%;
+}
+/* Shell comment mark, decorative. */
+.vp-doc h2::before {
+  content: '# ';
+  color: var(--dot);
+}
+.vp-doc h3 {
+  font-size: 0.98rem;
+  font-stretch: 90%;
+}
+.vp-doc p,
+.vp-doc li {
+  font-size: 1.04rem;
+  line-height: 1.7;
+}
+.vp-doc a {
+  color: var(--ink);
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: var(--marker);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+.vp-doc a:hover {
+  color: var(--ink);
+  background: var(--marker-pale);
+}
+.vp-doc code,
+.vp-doc pre {
+  font-stretch: 87.5%;
+}
+.vp-doc table {
+  font-size: 0.95rem;
+}
+.vp-doc th {
+  font-family: var(--font-mono);
+  font-stretch: 87.5%;
+  font-size: 0.74rem;
+  text-align: left;
+}
+.vp-doc .alias-table td:last-child,
+.vp-doc .alias-table th:last-child {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.vp-doc .alias-table code {
+  white-space: nowrap;
+}
+.VPNavBarTitle .logo {
+  height: 26px;
+}
+.VPDocAsideOutline .outline-title,
+.VPDocFooter .title {
+  font-family: var(--font-mono);
+  font-stretch: 87.5%;
+}
+
+/* Landing */
+.VPContent:has(.zl) {
+  background: var(--slate);
+}
+.zl {
+  --pad: max(1.25rem, calc((100vw - 82rem) / 2));
+  background: var(--slate);
+  color: #fff;
+  font-family: var(--font-text);
+  padding-bottom: 5rem;
+}
+.zl a:focus-visible,
+.zl button:focus-visible {
+  outline: 2px solid var(--marker);
+  outline-offset: 3px;
+}
+.zl code {
+  font-family: var(--font-mono);
+  font-stretch: 87.5%;
+}
+
+.zl-hero {
+  padding: clamp(2.5rem, 7vw, 5.5rem) var(--pad) clamp(2.5rem, 5vw, 4rem);
+}
+.zl-prompt {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--mist);
+  margin: 0 0 1.4rem;
+}
+.zl-prompt span {
+  color: var(--marker);
+  margin-right: 0.35em;
+}
+.zl-hero h1 {
+  font-family: var(--font-mono);
+  font-weight: 750;
+  font-size: clamp(1.55rem, 4.3vw, 3.35rem);
+  line-height: 1.16;
+  letter-spacing: -0.045em;
+  max-width: 21ch;
+  margin: 0;
+}
+.zl-lede {
+  max-width: 62ch;
+  margin: 1.75rem 0 0;
+  font-size: 1.12rem;
+  line-height: 1.65;
+  color: var(--mist);
+}
+.zl-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.75rem;
+  margin: 2rem 0 0;
+}
+.zl-button {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 650;
+  color: var(--ink);
+  background: var(--marker);
+  padding: 0.85rem 1.25rem;
+  border-radius: 10px;
+  text-decoration: none;
+}
+.zl-button:hover {
+  background: #ffe37a;
+}
+.zl-link {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.45);
+  text-underline-offset: 5px;
+}
+.zl-link:hover {
+  text-decoration-color: var(--marker);
+}
+
+/* The file: notes in the slate margin, code on a paper sheet that runs off the right edge. */
+.zl-file {
+  padding-left: var(--pad);
+}
+.zl-row {
+  display: grid;
+  grid-template-columns: minmax(0, 31rem) minmax(0, 1fr);
+  column-gap: clamp(1.5rem, 3vw, 3rem);
+}
+.zl-sheet {
+  background: var(--paper);
+  color: var(--ink);
+  padding: 0 clamp(1rem, 3vw, 2.5rem) 0 0;
+}
+.zl-sheet-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.4rem 1.5rem;
+  padding: 1.4rem clamp(1rem, 3vw, 2.5rem) 1.6rem 1.5rem;
+  border-top-left-radius: 22px;
+  font-family: var(--font-mono);
+  font-stretch: 87.5%;
+  font-size: 0.74rem;
+  color: #64748b;
+}
+.zl .zl-sheet-head h2 {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0 auto 0 0;
+  padding: 0;
+  border: 0;
+  letter-spacing: -0.02em;
+}
+.zl-sheet-head a {
+  color: var(--slate);
+  text-decoration: underline;
+  text-decoration-color: var(--marker);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+.zl-sheet-foot {
+  height: 1.75rem;
+  border-bottom-left-radius: 22px;
+}
+
+.zl-line {
+  display: grid;
+  grid-template-columns: 3.4rem minmax(0, 1fr);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  line-height: 1.95;
+  min-height: 1.95em;
+}
+.zl-n {
+  text-align: right;
+  padding-right: 1.1rem;
+  color: #a3adba;
+  font-stretch: 87.5%;
+  user-select: none;
+}
+.zl-line code {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-weight: 450;
+  padding: 0 0.35rem;
+  margin-left: -0.35rem;
+}
+.zl-line .c {
+  color: #6b7686;
+}
+.zl-line .k {
+  color: var(--slate);
+  font-weight: 700;
+}
+.zl-line .s {
+  color: #1d5a8a;
+}
+/* Highlighter over the block whose note is being read. */
+.zl-row.has-note:hover .zl-line code:not(:empty),
+.zl-row.has-note:focus-within .zl-line code:not(:empty),
+.zl-row.has-note:has(.zl-note:target) .zl-line code:not(:empty) {
+  background: var(--marker-pale);
+}
+
+.zl-note {
+  border-top: 1px solid rgba(255, 255, 255, 0.22);
+  margin-top: calc(0.8rem * 1.95 / 2);
+  padding: 0.85rem 0 1.5rem;
+  scroll-margin-top: 5rem;
+}
+.zl-note h3 {
+  font-family: var(--font-mono);
+  font-size: 0.86rem;
+  font-weight: 650;
+  line-height: 1.45;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.6rem;
+}
+.zl-note h3 a {
+  color: #fff;
+  text-decoration: none;
+}
+.zl-note h3 a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--marker);
+  text-underline-offset: 4px;
+}
+.zl-note-body p {
+  margin: 0 0 0.7rem;
+  font-size: 0.97rem;
+  line-height: 1.6;
+  color: var(--mist);
+}
+.zl-note-body code,
+.zl-use-text code {
+  font-size: 0.8em;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.11);
+  padding: 0.15em 0.4em;
+  border-radius: 5px;
+  overflow-wrap: anywhere;
+}
+.zl-note-body a,
+.zl-use-text a {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-color: var(--marker);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+.zl-row.has-note:hover .zl-note,
+.zl-row.has-note:has(.zl-note:target) .zl-note {
+  border-top-color: var(--marker);
+}
+
+/* Use it */
+.zl-use {
+  display: grid;
+  grid-template-columns: minmax(0, 31rem) minmax(0, 1fr);
+  column-gap: clamp(1.5rem, 3vw, 3rem);
+  row-gap: 2rem;
+  padding: clamp(4rem, 8vw, 7rem) 0 0 var(--pad);
+  scroll-margin-top: 2rem;
+}
+.zl h2 {
+  font-family: var(--font-mono);
+  font-size: clamp(1.2rem, 2.4vw, 1.6rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.25;
+  margin: 0 0 1.1rem;
+  padding: 0;
+  border: 0;
+}
+.zl-use-text p {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--mist);
+}
+.zl-warn {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.75rem;
+  border-left: 3px solid var(--marker);
+  background: var(--slate-deep);
+  padding: 1rem 1rem 0.1rem;
+  margin: 1.5rem 0;
+  border-radius: 0 10px 10px 0;
+}
+.zl-warn svg {
+  color: var(--marker);
+  margin-top: 0.2rem;
+}
+.zl-warn strong {
+  color: #fff;
+}
+.zl-install {
+  background: var(--paper);
+  color: var(--ink);
+  border-radius: 22px 0 0 22px;
+  padding: 1.4rem clamp(1rem, 3vw, 2.5rem) 1.25rem 1.5rem;
+  align-self: start;
+}
+.zl-install-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-stretch: 87.5%;
+  font-size: 0.74rem;
+  color: #64748b;
+  margin-bottom: 1.1rem;
+}
+.zl-install-head button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font: inherit;
+  font-weight: 600;
+  color: var(--ink);
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 0.45rem 0.75rem;
+  cursor: pointer;
+}
+.zl-install-head button:hover {
+  background: var(--marker-pale);
+  border-color: var(--marker);
+}
+.zl-install-head button:focus-visible {
+  outline-color: var(--slate);
+}
+.zl-install ol {
+  list-style: none;
+  counter-reset: step;
+  margin: 0;
+  padding: 0;
+}
+.zl-install li {
+  counter-increment: step;
+  display: grid;
+  grid-template-columns: 2.1rem minmax(0, 1fr);
+  padding: 0.85rem 0;
+  border-top: 1px solid #e2e8f0;
+}
+.zl-install li::before {
+  content: counter(step);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  line-height: 1.7;
+  color: #a3adba;
+}
+.zl-install li code {
+  font-size: 0.8rem;
+  line-height: 1.7;
+  font-weight: 550;
+  overflow-wrap: anywhere;
+}
+.zl-install li p {
+  grid-column: 2;
+  margin: 0.25rem 0 0;
+  font-size: 0.93rem;
+  line-height: 1.5;
+  color: #475569;
+}
+
+/* Background reading */
+.zl-next {
+  padding: clamp(4rem, 8vw, 7rem) var(--pad) 0;
+}
+.zl-next ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+}
+.zl-next li {
+  display: grid;
+  grid-template-columns: minmax(0, 31rem) minmax(0, 1fr);
+  column-gap: clamp(1.5rem, 3vw, 3rem);
+  row-gap: 0.3rem;
+  align-items: baseline;
+  padding: 1.1rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.22);
+}
+.zl-next a {
+  font-family: var(--font-mono);
+  font-size: 0.86rem;
+  font-weight: 650;
+  line-height: 1.5;
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-color: var(--marker);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+}
+.zl-next span {
+  color: var(--mist);
+  line-height: 1.55;
+}
+
+@media (max-width: 860px) {
+  .zl-row,
+  .zl-use,
+  .zl-next li {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .zl-file {
+    padding-left: 0;
+  }
+  .zl-gutter {
+    padding: 0 var(--pad);
+  }
+  .zl-note {
+    border-top: 0;
+    margin-top: 0;
+    padding: 1.75rem 0 1rem;
+  }
+  .zl-sheet-head,
+  .zl-sheet-foot {
+    border-radius: 0;
+  }
+  .zl-sheet-head {
+    padding: 1rem var(--pad) 0.75rem;
+  }
+  .zl-sheet-foot {
+    display: none;
+  }
+  .zl-code {
+    padding: 0.9rem var(--pad) 0.9rem 0;
+  }
+  /* The trailing blank line only adds dead space once blocks are stacked. */
+  .zl-row.has-note .zl-line:last-child:has(code:empty) {
+    display: none;
+  }
+  .zl-line {
+    grid-template-columns: 2.6rem minmax(0, 1fr);
+    font-size: 0.72rem;
+  }
+  .zl-n {
+    padding-right: 0.8rem;
+  }
+  .zl-use {
+    padding-left: 0;
+  }
+  .zl-use-text {
+    padding: 0 var(--pad);
+  }
+  .zl-install {
+    border-radius: 0;
+    padding: 1.25rem var(--pad);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Lets the table scroll sideways on phones without crushing the description. */
+.vp-doc .alias-table td:nth-child(3) {
+  min-width: 15rem;
+}
