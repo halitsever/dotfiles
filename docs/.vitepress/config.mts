@@ -1,6 +1,6 @@
 import { defineConfig } from 'vitepress'
 
-const site = 'https://halitsever.github.io/dotfiles/'
+const site = 'https://projects.halit.org/dotfiles/'
 const name = 'dotfiles'
 const description = 'A real macOS .zshrc example, annotated block by block: Oh My Zsh, Homebrew and SDK paths, pyenv, gvm, git aliases and shared zsh history.'
 
@@ -35,7 +35,7 @@ export default defineConfig({
   sitemap: { hostname: site },
 
   head: [
-    /** Cloudflare Web Analytics, one token for every page on halitsever.github.io. */
+    /** Cloudflare Web Analytics, one token for every page on projects.halit.org. */
     ['script', { defer: '', src: 'https://static.cloudflareinsights.com/beacon.min.js', 'data-cf-beacon': '{"token": "dd7e54d3f48841c187d72d9dbb92a6b6"}' }],
     ['link', { rel: 'icon', href: '/dotfiles/favicon.png', sizes: '32x32', type: 'image/png' }],
     ['link', { rel: 'icon', href: '/dotfiles/favicon.svg', type: 'image/svg+xml' }],

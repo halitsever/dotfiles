@@ -19,7 +19,7 @@ Halit Sever's personal macOS shell setup: an Oh My Zsh `.zshrc`, symlinked into 
 
 ## Docs site
 
-- VitePress site in `docs/`, published to https://halitsever.github.io/dotfiles/ by `.github/workflows/docs.yml`. Build it with `cd docs && npm ci && npm run build`.
+- VitePress site in `docs/`, published to https://projects.halit.org/dotfiles/ by `.github/workflows/docs.yml`. Build it with `cd docs && npm ci && npm run build`.
 - The home page reads `.zshrc` and the README install block at build time (`docs/.vitepress/theme/zshrc.data.ts`). Margin notes in `docs/.vitepress/theme/notes.ts` find their block by a string it contains.
 - The build fails when a note's key no longer matches exactly one block, so update `notes.ts` when you rename or remove a block in `.zshrc`.
 
