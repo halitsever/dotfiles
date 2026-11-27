@@ -6,7 +6,7 @@ Install by cloning to `~/dotfiles` and symlinking: `ln -sf ~/dotfiles/.zshrc ~/.
 
 ## Docs
 
-- [Website](https://halitsever.github.io/dotfiles/): the `.zshrc` annotated block by block, plus guides on `.zshrc`, aliases and dotfiles
+- [Website](https://projects.halit.org/dotfiles/): the `.zshrc` annotated block by block, plus guides on `.zshrc`, aliases and dotfiles
 - [README](https://github.com/halitsever/dotfiles/blob/main/Readme.md): features and install steps
 - [.zshrc](https://github.com/halitsever/dotfiles/blob/main/.zshrc): the zsh configuration itself
 - [CI workflow](https://github.com/halitsever/dotfiles/blob/main/.github/workflows/ci.yml): the `zsh -n` syntax check run on every push and pull request
