@@ -1,4 +1,6 @@
 import { defineConfig } from 'vitepress'
+import { copyFileSync } from 'node:fs'
+import { join } from 'node:path'
 
 const site = 'https://projects.halit.org/dotfiles/'
 const name = 'dotfiles'
@@ -74,6 +76,10 @@ const jsonLd = {
 }
 
 export default defineConfig({
+  /** llms.txt lives at the repo root, so the build copies it into the site instead of keeping a second copy. */
+  buildEnd(siteConfig) {
+    copyFileSync(join(siteConfig.root, '..', 'llms.txt'), join(siteConfig.outDir, 'llms.txt'))
+  },
   /** keeps the page hash map out of every page's HTML, which Semrush reads as a low text-to-HTML ratio */
   metaChunk: true,
   base: '/dotfiles/',
