@@ -24,7 +24,7 @@ const guides = [
   { href: '/aliases', title: 'Git and zsh aliases', text: 'Every alias in this file with what it expands to, and how to add your own.' },
   { href: '/what-are-dotfiles', title: 'What are dotfiles', text: 'Why people keep config files in git, how this repository is laid out, how to start yours.' },
   { href: '/install-oh-my-zsh-mac/', title: 'Install Oh My Zsh on a Mac', text: 'The official installer, the font agnoster needs, then this .zshrc with a backup and a symlink.' },
-  { href: '/blog/', title: 'Blog', text: 'Zsh themes and plugins, reloading .zshrc, startup files and command not found errors.' },
+  { href: '/blog/', title: 'Blog', text: 'Zsh themes and plugins, history, completion, reloading .zshrc, startup files and PATH errors.' },
 ]
 </script>
 
@@ -32,7 +32,7 @@ const guides = [
   <div class="zl">
     <header class="zl-hero">
       <p class="zl-prompt" aria-hidden="true"><span>%</span> cat ~/.zshrc</p>
-      <h1>A macOS .zshrc example, annotated line by line</h1>
+      <h1>A real macOS .zshrc, explained block by block</h1>
       <p class="zl-lede">
         This is the .zshrc I use on my Mac, all {{ data.lineCount }} lines of it: Oh My Zsh, paths for Homebrew and the SDKs I build with, a few git aliases and shared
         history. The file below is read from the repository when this site builds, so it is always the current version. The notes beside it say what each block does

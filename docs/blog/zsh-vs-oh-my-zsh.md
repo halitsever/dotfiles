@@ -123,4 +123,5 @@ It adds work at start-up, mostly from plugins and completion. How much depends o
 - [Choosing and switching a zsh theme with Oh My Zsh](/blog/zsh-themes)
 - [Zsh plugins: the git plugin and two common additions](/blog/zsh-plugins)
 - [Removing Oh My Zsh and getting your old .zshrc back](/blog/uninstall-oh-my-zsh)
+- [How Tab completion works in Oh My Zsh, and why not to call compinit twice](/blog/oh-my-zsh-autocomplete)
 - [All posts](/blog/)

@@ -18,6 +18,12 @@ const posts = [
   ['zshrc-command-not-found', 'Command not found'],
   ['zshrc-vs-zprofile', '.zshrc vs .zprofile'],
   ['uninstall-oh-my-zsh', 'Uninstall Oh My Zsh'],
+  ['zsh-autosuggestions', 'zsh-autosuggestions'],
+  ['neofetch-alternatives', 'Neofetch alternatives'],
+  ['zsh-history', 'Zsh history'],
+  ['set-java-home-mac', 'JAVA_HOME on a Mac'],
+  ['zsh-command-not-found-adb', 'adb not found'],
+  ['oh-my-zsh-autocomplete', 'Autocomplete and compinit'],
 ]
 
 /** BlogPosting, breadcrumbs and, when the post shows an FAQ, FAQPage data for a blog post. */

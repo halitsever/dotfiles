@@ -111,4 +111,5 @@ Either works for interactive use. Put it in .zprofile if you want it set once pe
 - [zsh is the shell, Oh My Zsh is a framework on top](/blog/zsh-vs-oh-my-zsh)
 - [Reloading .zshrc: source, exec zsh and omz reload](/blog/reload-zshrc)
 - [zsh: command not found after a .zshrc change](/blog/zshrc-command-not-found)
+- [JAVA_HOME on macOS: java_home, Homebrew and the right path](/blog/set-java-home-mac)
 - [All posts](/blog/)
