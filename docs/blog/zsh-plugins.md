@@ -5,7 +5,7 @@ description: "Which zsh plugins to install and how: the Oh My Zsh git plugin and
 headline: "Zsh plugins: the git plugin and two common additions"
 date: "2026-11-28"
 keyword: "zsh plugins"
-faq: [{"q": "How do I add a plugin to Oh My Zsh?", "a": "Add its name to the plugins list in ~/.zshrc, separated by spaces, for example plugins=(git docker). Plugins that do not ship with Oh My Zsh must be cloned into ~/.oh-my-zsh/custom/plugins first."}, {"q": "Why did my plugins stop working after I added commas?", "a": "The Oh My Zsh README says not to use commas between plugin names. The list is a zsh array, and commas become part of the names."}, {"q": "Where does zsh-syntax-highlighting go in the list?", "a": "Its documentation asks for it to be loaded last, after other plugins, so put it at the end of the plugins list."}]
+faq: [{"q": "How do I add a plugin to Oh My Zsh?", "a": "Add its name to the plugins list in ~/.zshrc, separated by spaces, for example plugins=(git docker). Plugins that do not ship with Oh My Zsh must be cloned into ~/.oh-my-zsh/custom/plugins first. zsh-autosuggestions and zsh-syntax-highlighting ship with it since September 2026."}, {"q": "Why did my plugins stop working after I added commas?", "a": "The Oh My Zsh README says not to use commas between plugin names. The list is a zsh array, and commas become part of the names."}, {"q": "Where does zsh-syntax-highlighting go in the list?", "a": "Its documentation asks for it to be loaded last, after other plugins, so put it at the end of the plugins list."}]
 ---
 
 # Zsh plugins: the git plugin and two common additions
@@ -71,24 +71,24 @@ In zsh the last definition wins, so `ga` and `gc` here replace the plugin's vers
 
 ## zsh-autosuggestions
 
-[zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) shows a grey completion as you type, taken from your history. Press the right arrow key to accept it. It is not bundled with Oh My Zsh, so clone it into the custom folder first:
+[zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) shows a grey completion as you type, taken from your history. Press the right arrow key to accept it. Oh My Zsh has bundled it since [pull request 14088](https://github.com/ohmyzsh/ohmyzsh/pull/14088), merged on 10 September 2026, so on a current install `omz update` is the only step before adding it to the list. Installs older than that need a clone into the custom folder:
 
 ```sh
 git clone https://github.com/zsh-users/zsh-autosuggestions \
   ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ```
 
-Then add it to the list:
+Either way, add it to the list:
 
 ```sh
 plugins=(git zsh-autosuggestions)
 ```
 
-Suggestions come from history, so the 5000-entry shared history this `.zshrc` keeps makes them useful from the first day on a machine.
+Suggestions come from history, so the 5000-entry shared history this `.zshrc` keeps makes them useful from the first day on a machine. Accept keys, strategies and colours are in the [zsh-autosuggestions guide](/blog/zsh-autosuggestions).
 
 ## zsh-syntax-highlighting
 
-[zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) colors the command line while you type: a command that exists turns green, a typo turns red before you press Enter. Install it the same way:
+[zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) colors the command line while you type: a command that exists turns green, a typo turns red before you press Enter. It arrived in Oh My Zsh in the same pull request. On older installs, clone it the same way:
 
 ```sh
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git \
@@ -127,7 +127,7 @@ This repository loads one plugin and guards optional tools with `command -v` so 
 
 ### How do I add a plugin to Oh My Zsh?
 
-Add its name to the plugins list in ~/.zshrc, separated by spaces, for example plugins=(git docker). Plugins that do not ship with Oh My Zsh must be cloned into ~/.oh-my-zsh/custom/plugins first.
+Add its name to the plugins list in ~/.zshrc, separated by spaces, for example plugins=(git docker). Plugins that do not ship with Oh My Zsh must be cloned into ~/.oh-my-zsh/custom/plugins first. zsh-autosuggestions and zsh-syntax-highlighting ship with it since September 2026.
 
 ### Why did my plugins stop working after I added commas?
 
@@ -142,4 +142,5 @@ Its documentation asks for it to be loaded last, after other plugins, so put it 
 - [Choosing and switching a zsh theme with Oh My Zsh](/blog/zsh-themes)
 - [zsh is the shell, Oh My Zsh is a framework on top](/blog/zsh-vs-oh-my-zsh)
 - [zsh: command not found after a .zshrc change](/blog/zshrc-command-not-found)
+- [Grey history suggestions in zsh with zsh-autosuggestions](/blog/zsh-autosuggestions)
 - [All posts](/blog/)

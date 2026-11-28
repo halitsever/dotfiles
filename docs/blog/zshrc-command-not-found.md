@@ -132,4 +132,6 @@ Run zsh -n ~/.zshrc to check syntax without running it. Run zsh -i -c exit to st
 - [Zsh plugins: the git plugin and two common additions](/blog/zsh-plugins)
 - [Reloading .zshrc: source, exec zsh and omz reload](/blog/reload-zshrc)
 - [Which zsh startup file to use: .zshrc, .zprofile or .zshenv](/blog/zshrc-vs-zprofile)
+- [adb is installed but zsh cannot find it: add platform-tools to PATH](/blog/zsh-command-not-found-adb)
+- [JAVA_HOME on macOS: java_home, Homebrew and the right path](/blog/set-java-home-mac)
 - [All posts](/blog/)

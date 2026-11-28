@@ -124,4 +124,5 @@ Each source run executes the export PATH lines again and prepends the same folde
 - [Choosing and switching a zsh theme with Oh My Zsh](/blog/zsh-themes)
 - [zsh: command not found after a .zshrc change](/blog/zshrc-command-not-found)
 - [Which zsh startup file to use: .zshrc, .zprofile or .zshenv](/blog/zshrc-vs-zprofile)
+- [How zsh history works and how to tune it](/blog/zsh-history)
 - [All posts](/blog/)

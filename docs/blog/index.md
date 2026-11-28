@@ -1,7 +1,7 @@
 ---
 title: "Zsh and Oh My Zsh Guides for macOS"
 titleTemplate: false
-description: "Guides to zsh on macOS: themes, plugins, Powerlevel10k vs agnoster, reloading .zshrc, startup files, command not found errors and uninstalling Oh My Zsh."
+description: "Zsh guides for macOS: themes, plugins, autosuggestions, history, completion, JAVA_HOME and adb PATH fixes, startup files and removing Oh My Zsh."
 ---
 
 # Notes on zsh, Oh My Zsh and the .zshrc
@@ -39,3 +39,27 @@ zshrc vs zprofile vs zshenv: the order zsh reads its startup files, login and in
 ## [Removing Oh My Zsh and getting your old .zshrc back](/blog/uninstall-oh-my-zsh)
 
 Uninstall Oh My Zsh with uninstall_oh_my_zsh: what the script deletes, how it restores .zshrc.pre-oh-my-zsh, symlinked dotfiles, and what to use instead.
+
+## [Grey history suggestions in zsh with zsh-autosuggestions](/blog/zsh-autosuggestions)
+
+Set up zsh-autosuggestions with Oh My Zsh, which now bundles it, or with Homebrew. Accept keys, strategies, colors and the plugin not found error.
+
+## [Neofetch is archived: what to run in its place](/blog/neofetch-alternatives)
+
+Neofetch is archived and Homebrew removed its formula in 2026. Compare fastfetch, hyfetch, macchina and screenfetch, and swap the startup line in .zshrc.
+
+## [How zsh history works and how to tune it](/blog/zsh-history)
+
+How zsh history works: HISTFILE, HISTSIZE and SAVEHIST, SHARE_HISTORY across tabs, searching and clearing history, and fixing a corrupt zsh_history file.
+
+## [JAVA_HOME on macOS: java_home, Homebrew and the right path](/blog/set-java-home-mac)
+
+Set JAVA_HOME on a Mac in zsh with /usr/libexec/java_home, pick a Java version, link Homebrew OpenJDK, and avoid the Intel path mistake in many .zshrc files.
+
+## [adb is installed but zsh cannot find it: add platform-tools to PATH](/blog/zsh-command-not-found-adb)
+
+Fix zsh: command not found: adb on macOS. Find platform-tools, set ANDROID_HOME and PATH in .zshrc, or install adb with Homebrew, then check with which adb.
+
+## [How Tab completion works in Oh My Zsh, and why not to call compinit twice](/blog/oh-my-zsh-autocomplete)
+
+How Oh My Zsh autocomplete works: compinit and .zcompdump, case-insensitive matching, the insecure directories warning, and a duplicate compinit to remove.

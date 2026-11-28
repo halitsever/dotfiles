@@ -3,7 +3,7 @@ title: What is .zshrc and where is it on a Mac
 description: What the .zshrc file is, where it lives on a Mac, how to open and edit it, and how to reload it so your changes apply without a new terminal.
 ---
 
-# What is .zshrc and where is it on a Mac
+# The .zshrc file: what it does and where macOS keeps it
 
 `.zshrc` is the file zsh reads every time it starts an interactive shell. Each time you open a terminal window or tab, zsh runs the commands in that file from top to bottom before it shows you a prompt. That makes it the place for anything you want in every terminal session: `PATH` entries, aliases, the prompt theme, history settings and the setup lines that tools such as pyenv ask you to add.
 
