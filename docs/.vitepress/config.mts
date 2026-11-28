@@ -7,6 +7,57 @@ const description = 'A real macOS .zshrc example, annotated block by block: Oh M
 const repo = 'https://github.com/halitsever/dotfiles'
 const author = { '@type': 'Person', name: 'Halit Sever', url: 'https://github.com/halitsever' }
 
+const posts = [
+  ['zsh-themes', 'Zsh themes'],
+  ['zsh-vs-oh-my-zsh', 'Zsh vs Oh My Zsh'],
+  ['zsh-plugins', 'Zsh plugins'],
+  ['powerlevel10k-vs-agnoster', 'Powerlevel10k vs agnoster'],
+  ['reload-zshrc', 'Reload .zshrc'],
+  ['zshrc-command-not-found', 'Command not found'],
+  ['zshrc-vs-zprofile', '.zshrc vs .zprofile'],
+  ['uninstall-oh-my-zsh', 'Uninstall Oh My Zsh'],
+]
+
+/** BlogPosting, breadcrumbs and, when the post shows an FAQ, FAQPage data for a blog post. */
+function postJsonLd(fm: Record<string, any>, url: string) {
+  const person = { '@type': 'Person', name: 'Halit Sever', url: 'https://halit.org' }
+  const graph: object[] = [
+    {
+      '@type': 'BlogPosting',
+      headline: fm.headline ?? fm.title,
+      description: fm.description,
+      url,
+      mainEntityOfPage: url,
+      datePublished: fm.date,
+      dateModified: fm.date,
+      inLanguage: 'en',
+      image: `${site}og.png`,
+      keywords: fm.keyword,
+      author: person,
+      publisher: person,
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'dotfiles', item: site },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: `${site}blog/` },
+        { '@type': 'ListItem', position: 3, name: fm.headline ?? fm.title, item: url },
+      ],
+    },
+  ]
+  if (fm.faq?.length) {
+    graph.push({
+      '@type': 'FAQPage',
+      mainEntity: fm.faq.map((f: { q: string; a: string }) => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    })
+  }
+  return { '@context': 'https://schema.org', '@graph': graph }
+}
+
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'SoftwareSourceCode',
@@ -40,7 +91,6 @@ export default defineConfig({
     ['link', { rel: 'icon', href: '/dotfiles/favicon.png', sizes: '32x32', type: 'image/png' }],
     ['link', { rel: 'icon', href: '/dotfiles/favicon.svg', type: 'image/svg+xml' }],
     ['meta', { name: 'theme-color', content: '#334155' }],
-    ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:site_name', content: name }],
     ['meta', { property: 'og:image', content: `${site}og.png` }],
     ['meta', { property: 'og:image:width', content: '1280' }],
@@ -51,15 +101,18 @@ export default defineConfig({
   ],
 
   transformPageData(pageData) {
-    const title = pageData.frontmatter.title ?? pageData.title
+    const fm = pageData.frontmatter
+    const title = fm.title ?? pageData.title
     const url = site + pageData.relativePath.replace(/(^|\/)index\.md$/, '$1').replace(/\.md$/, '')
-    pageData.frontmatter.head ??= []
-    pageData.frontmatter.head.push(
+    fm.head ??= []
+    fm.head.push(
       ['link', { rel: 'canonical', href: url }],
       ['meta', { property: 'og:url', content: url }],
-      ['meta', { property: 'og:title', content: `${title} | dotfiles` }],
-      ['meta', { property: 'og:description', content: pageData.frontmatter.description ?? description }],
+      ['meta', { property: 'og:type', content: fm.date ? 'article' : 'website' }],
+      ['meta', { property: 'og:title', content: fm.titleTemplate === false ? title : `${title} | dotfiles` }],
+      ['meta', { property: 'og:description', content: fm.description ?? description }],
     )
+    if (fm.date) fm.head.push(['script', { type: 'application/ld+json' }, JSON.stringify(postJsonLd(fm, url))])
   },
 
   markdown: {
@@ -73,7 +126,17 @@ export default defineConfig({
       { text: 'What is .zshrc', link: '/what-is-zshrc' },
       { text: 'Aliases', link: '/aliases' },
       { text: 'Dotfiles', link: '/what-are-dotfiles' },
+      { text: 'Install Oh My Zsh', link: '/install-oh-my-zsh-mac/' },
+      { text: 'Blog', link: '/blog/', activeMatch: '/blog/' },
     ],
+    sidebar: {
+      '/blog/': [
+        {
+          text: 'Zsh guides',
+          items: [{ text: 'All posts', link: '/blog/' }, ...posts.map(([slug, text]) => ({ text, link: `/blog/${slug}` }))],
+        },
+      ],
+    },
     socialLinks: [{ icon: 'github', link: repo }],
     outline: { level: 2, label: 'On this page' },
     docFooter: { prev: 'Previous', next: 'Next' },

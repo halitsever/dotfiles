@@ -7,6 +7,16 @@ Install by cloning to `~/dotfiles` and symlinking: `ln -sf ~/dotfiles/.zshrc ~/.
 ## Docs
 
 - [Website](https://projects.halit.org/dotfiles/): the `.zshrc` annotated block by block, plus guides on `.zshrc`, aliases and dotfiles
+- [Install Oh My Zsh on a Mac](https://projects.halit.org/dotfiles/install-oh-my-zsh-mac/): the official installer, the font agnoster needs, then this .zshrc with a backup and a symlink
+- [Blog](https://projects.halit.org/dotfiles/blog/): zsh and Oh My Zsh guides
+- [Choosing and switching a zsh theme with Oh My Zsh](https://projects.halit.org/dotfiles/blog/zsh-themes): How zsh themes work with Oh My Zsh: set ZSH_THEME, try random themes, install the font agnoster needs on a Mac, and add a theme Oh My Zsh does not bundle.
+- [zsh is the shell, Oh My Zsh is a framework on top](https://projects.halit.org/dotfiles/blog/zsh-vs-oh-my-zsh): Zsh vs Oh My Zsh explained: one is the shell, the other a framework of themes, plugins and defaults. See what a real .zshrc takes from each and what to drop.
+- [Zsh plugins: the git plugin and two common additions](https://projects.halit.org/dotfiles/blog/zsh-plugins): Which zsh plugins to install and how: the Oh My Zsh git plugin and its aliases, zsh-autosuggestions and zsh-syntax-highlighting, and plugin load order.
+- [Powerlevel10k or agnoster: two powerline prompts compared](https://projects.halit.org/dotfiles/blog/powerlevel10k-vs-agnoster): Powerlevel10k vs agnoster on Oh My Zsh: install steps, fonts, the p10k configure wizard, instant prompt, and the limited support notice in the p10k README.
+- [Reloading .zshrc: source, exec zsh and omz reload](https://projects.halit.org/dotfiles/blog/reload-zshrc): How to reload .zshrc after an edit: source ~/.zshrc, exec zsh or omz reload, what each one does to PATH and aliases, and a reload alias that does not pile up.
+- [zsh: command not found after a .zshrc change](https://projects.halit.org/dotfiles/blog/zshrc-command-not-found): Fix zsh command not found errors after editing .zshrc: read the error line, check PATH order for Homebrew and pnpm, rehash, and test the file with zsh -n.
+- [Which zsh startup file to use: .zshrc, .zprofile or .zshenv](https://projects.halit.org/dotfiles/blog/zshrc-vs-zprofile): zshrc vs zprofile vs zshenv: the order zsh reads its startup files, login and interactive shells on macOS, where PATH belongs, and how bash files compare.
+- [Removing Oh My Zsh and getting your old .zshrc back](https://projects.halit.org/dotfiles/blog/uninstall-oh-my-zsh): Uninstall Oh My Zsh with uninstall_oh_my_zsh: what the script deletes, how it restores .zshrc.pre-oh-my-zsh, symlinked dotfiles, and what to use instead.
 - [README](https://github.com/halitsever/dotfiles/blob/main/Readme.md): features and install steps
 - [.zshrc](https://github.com/halitsever/dotfiles/blob/main/.zshrc): the zsh configuration itself
 - [CI workflow](https://github.com/halitsever/dotfiles/blob/main/.github/workflows/ci.yml): the `zsh -n` syntax check run on every push and pull request

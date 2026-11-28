@@ -23,6 +23,8 @@ const guides = [
   { href: '/what-is-zshrc', title: 'What is .zshrc and where is it on a Mac', text: 'What zsh reads at startup, where the file lives, how to open, edit and reload it.' },
   { href: '/aliases', title: 'Git and zsh aliases', text: 'Every alias in this file with what it expands to, and how to add your own.' },
   { href: '/what-are-dotfiles', title: 'What are dotfiles', text: 'Why people keep config files in git, how this repository is laid out, how to start yours.' },
+  { href: '/install-oh-my-zsh-mac/', title: 'Install Oh My Zsh on a Mac', text: 'The official installer, the font agnoster needs, then this .zshrc with a backup and a symlink.' },
+  { href: '/blog/', title: 'Blog', text: 'Zsh themes and plugins, reloading .zshrc, startup files and command not found errors.' },
 ]
 </script>
 
