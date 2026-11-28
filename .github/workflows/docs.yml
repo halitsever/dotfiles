@@ -6,6 +6,7 @@ on:
     paths:
       - 'docs/**'
       - '.github/workflows/docs.yml'
+      - 'llms.txt'
       # The home page is generated from these two files.
       - '.zshrc'
       - 'Readme.md'
@@ -13,6 +14,7 @@ on:
     paths:
       - 'docs/**'
       - '.github/workflows/docs.yml'
+      - 'llms.txt'
       - '.zshrc'
       - 'Readme.md'
   workflow_dispatch:
